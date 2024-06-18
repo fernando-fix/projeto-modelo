@@ -372,9 +372,25 @@ return [
         //     ],
         // ],
         [
+            'text' => 'Home',
+            'icon' => 'fas fa-fw fa-home',
+            'url' => '/home',
+        ],
+        [
             'text' => 'Dashboard',
             'icon' => 'fas fa-tachometer-alt',
             'url' => '/dashboard',
+        ],
+        [
+            'text' => 'Example',
+            'icon' => 'fas fa-fw fa-file',
+            'submenu' => [
+                [
+                    'text' => 'Example',
+                    'url' => '/examples',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+            ]
         ],
         // ['header' => 'labels'],
         // [
