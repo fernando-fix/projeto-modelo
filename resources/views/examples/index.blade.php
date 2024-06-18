@@ -5,6 +5,83 @@
             <div class="card-header">
                 <h3 class="card-title">Usuários</h3>
                 <div class="card-tools">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle"
+                            data-toggle="dropdown" title="Mais Opções">
+                            <i class="fas fa-columns"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-check-square text-primary"></i>
+                                    Id
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-check-square text-primary"></i>
+                                    Name
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-check-square text-primary"></i>
+                                    Email
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-square text-primary"></i>
+                                    Senha
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-square text-primary"></i>
+                                    Função
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-check-square text-primary"></i>
+                                    Observação
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle"
+                            data-toggle="dropdown" title="Mais Opções">
+                            <i class="fas fa-file-export"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-print text-primary"></i>
+                                    Imprimir
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-file-csv text-primary"></i>
+                                    Exportar para CSV
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-file-excel text-primary"></i>
+                                    Exportar para Excel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-file-pdf text-primary"></i>
+                                    Exportar para PDF
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <button class="btn btn-sm btn-primary" title="Pesquisar/Filtrar">
                         <i class="fas fa-filter"></i>
                     </button>
