@@ -15,12 +15,12 @@ Abrir um terminal:
 ```bash
 git clone https://github.com/fernando-fix/projeto-modelo.git &&
 cd projeto-modelo &&
-cp .env.example .env
-composer install
-composer adminlte:install
-php artisan key:generate
-nano .env
-php artisan migrate --force
+cp .env.example .env &&
+composer install &&
+composer adminlte:install &&
+php artisan key:generate &&
+nano .env &&
+php artisan migrate --force &&
 php artisan serve
 ```
 Em outro terminal:

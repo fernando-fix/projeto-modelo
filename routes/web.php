@@ -14,11 +14,13 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-Route::resource('/examples', ExampleController::class);
-
 Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/examples/blade', [ExampleController::class, 'index'])->name('examples.blade');
+    Route::get('/examples/vue', [ExampleController::class, 'vue'])->name('examples.vue');
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

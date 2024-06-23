@@ -386,8 +386,13 @@ return [
             'icon' => 'fas fa-fw fa-file',
             'submenu' => [
                 [
-                    'text' => 'Example',
-                    'url' => '/examples',
+                    'text' => 'Blade Example',
+                    'url' => '/examples/blade',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+                [
+                    'text' => 'Vue Example',
+                    'url' => '/examples/vue',
                     'icon' => 'fas fa-fw fa-file',
                 ],
             ]

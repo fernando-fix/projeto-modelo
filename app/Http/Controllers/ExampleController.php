@@ -19,7 +19,48 @@ class ExampleController extends Controller
      */
     public function index()
     {
-        return view('examples.index');
+        $users = [
+            [
+                "id" => 1,
+                "name" => 'Fernando',
+                "email" => 'fernando@email',
+                "funcao" => 'Desenvolvedor',
+            ],
+            [
+                "id" => 2,
+                "name" => 'Joaquim',
+                "email" => 'joaquim@email',
+                "funcao" => 'Analista de sistemas',
+            ],
+            [
+                "id" => 3,
+                "name" => 'Maria',
+                "email" => 'maria@email',
+                "funcao" => 'Gerente de projetos',
+            ],
+            [
+                "id" => 4,
+                "name" => 'Carlos',
+                "email" => 'carlos@email',
+                "funcao" => 'Product Owner',
+            ],
+            [
+                "id" => 5,
+                "name" => 'Joana',
+                "email" => 'joana@email',
+                "funcao" => 'Scrum Master',
+            ],
+        ];
+
+        return view('examples.blade', ['users' => $users]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function vue()
+    {
+        return view('examples.vue');
     }
 
     /**

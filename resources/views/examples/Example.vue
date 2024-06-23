@@ -4,7 +4,7 @@
             <div class="card-header">
                 <h3 class="card-title">Usuários</h3>
                 <div class="card-tools">
-                    <div class="btn-group ml-1">
+                    <!-- <div class="btn-group ml-1">
                         <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"
                             title="Mais Opções">
                             <i class="fas fa-columns"></i>
@@ -47,8 +47,8 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="btn-group ml-1">
+                    </div> -->
+                    <!-- <div class="btn-group ml-1">
                         <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"
                             title="Mais Opções">
                             <i class="fas fa-file-export"></i>
@@ -79,7 +79,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <button class="btn btn-sm btn-primary ml-1" title="Pesquisar/Filtrar">
                         <i class="fas fa-filter"></i>
                     </button>
