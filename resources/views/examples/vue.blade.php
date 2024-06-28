@@ -1,4 +1,6 @@
 @extends('adminlte::page')
 @section('content')
-    <Example />
+    @component('components.vue-template')
+        <Example />
+    @endcomponent
 @endsection
