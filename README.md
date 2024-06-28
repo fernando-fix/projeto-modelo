@@ -6,12 +6,12 @@ Projeto base para novos projetos, com a utilização opcional do vue nas página
 
 ## Tecnologias
 
-PHP8.3, Laravel11, Vue3.
+PHP8.3, Laravel11, VUE3.
 
 ## Instalação:
 
 ### Linux
-Abrir um terminal:
+Abrir o terminal:
 ```bash
 git clone https://github.com/fernando-fix/projeto-modelo.git &&
 cd projeto-modelo &&
@@ -20,10 +20,12 @@ composer install &&
 php artisan key:generate &&
 nano .env &&
 php artisan migrate --force &&
+npm install &&
+npm run build &&
 code . &&
 php artisan serve
 ```
-Em outro terminal:
+Em outro terminal, se for alterar o projeto:
 ```bash
 npm install
 npm run dev
