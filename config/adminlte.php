@@ -383,17 +383,17 @@ return [
         ],
         [
             'text' => 'Example',
-            'icon' => 'fas fa-fw fa-file',
+            'icon' => 'fas fa-info-circle',
             'submenu' => [
                 [
                     'text' => 'Blade Example',
                     'url' => '/examples/blade',
-                    'icon' => 'fas fa-fw fa-file',
+                    'icon' => 'fab fa-laravel',
                 ],
                 [
                     'text' => 'Vue Example',
                     'url' => '/examples/vue',
-                    'icon' => 'fas fa-fw fa-file',
+                    'icon' => 'fab fa-vuejs',
                 ],
             ]
         ],

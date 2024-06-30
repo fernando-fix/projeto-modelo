@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-    Route::get('/examples/blade', [ExampleController::class, 'index'])->name('examples.blade');
+    Route::get('/examples/blade', [ExampleController::class, 'blade'])->name('examples.blade');
     Route::get('/examples/vue', [ExampleController::class, 'vue'])->name('examples.vue');
 
 

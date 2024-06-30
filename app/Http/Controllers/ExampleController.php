@@ -17,7 +17,7 @@ class ExampleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function blade()
     {
         $users = [
             [
@@ -52,7 +52,7 @@ class ExampleController extends Controller
             ],
         ];
 
-        return view('examples.blade', ['users' => $users]);
+        return view('examples.blade.index', ['users' => $users]);
     }
 
     /**
@@ -60,7 +60,15 @@ class ExampleController extends Controller
      */
     public function vue()
     {
-        return view('examples.vue');
+        return view('examples.vue.index');
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
     }
 
     /**
