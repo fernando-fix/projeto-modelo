@@ -9,6 +9,8 @@
         "jeroennoten/laravel-adminlte": "^3.11",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "php-flasher/flasher-laravel": "^2.0",
+        "php-flasher/flasher-toastr-laravel": "^2.0",
         "rap2hpoutre/laravel-log-viewer": "^2.4"
     },
     "require-dev": {

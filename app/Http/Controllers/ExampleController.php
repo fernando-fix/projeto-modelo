@@ -52,6 +52,11 @@ class ExampleController extends Controller
             ],
         ];
 
+        flash()->success('Mensagem de sucesso!');
+        flash()->info('Mensagem de informação!');
+        flash()->warning('Mensagem de aviso!');
+        flash()->error('Mensagem de erro!');
+
         return view('examples.blade.index', ['users' => $users]);
     }
 
@@ -60,6 +65,11 @@ class ExampleController extends Controller
      */
     public function vue()
     {
+        toastr()->success('Mensagem de sucesso!');
+        toastr()->info('Mensagem de informação!');
+        toastr()->warning('Mensagem de aviso!');
+        toastr()->error('Mensagem de erro!');
+
         return view('examples.vue.index');
     }
 
