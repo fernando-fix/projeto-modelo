@@ -33,50 +33,54 @@
                                 <td class="align-middle">{{ $role->users->count() }}</td>
                                 <td class="align-middle">{{ $role->permissions->count() }}</td>
                                 <td class="align-middle" style="white-space: nowrap;">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle"
-                                            data-toggle="dropdown" title="Mais Opções">
-                                            <i class="fas fa-bars"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            {{-- <li>
+                                    @canany(['excluir_papeis', 'associar_permissoes', 'editar_papeis'])
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle"
+                                                data-toggle="dropdown" title="Mais Opções">
+                                                <i class="fas fa-bars"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                {{-- <li>
                                                 <a class="dropdown-item" href="#">
                                                     <i class="fas fa-eye text-info"></i>
                                                     Visualizar
                                                 </a>
                                             </li> --}}
-                                            @can('editar_papeis')
-                                                <li>
-                                                    @include('roles.edit_modal_trigger', $role)
-                                                </li>
-                                            @endcan
-                                            @can('associar_permissoes')
-                                                <li>
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('roles.edit_permissions', $role) }}">
-                                                        <i class="fas fa-user-tag text-primary"></i>
-                                                        Associar permissões
-                                                    </a>
-                                                </li>
-                                            @endcan
-                                            @can('excluir_papeis')
-                                                <li>
-                                                    <form action="{{ route('roles.destroy', $role) }}" method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="dropdown-item" href="#"
-                                                            title="Excluir"
-                                                            onclick="return confirm('Deseja realmente excluir este registro?');">
-                                                            <i class="fas fa-trash text-danger"></i>
-                                                            Excluir
-                                                        </button>
-                                                    </form>
-                                                </li>
-                                            @endcan
-                                        </ul>
-                                    </div>
+                                                @can('editar_papeis')
+                                                    <li>
+                                                        @include('roles.edit_modal_trigger', $role)
+                                                    </li>
+                                                @endcan
+                                                @can('associar_permissoes')
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('roles.edit_permissions', $role) }}">
+                                                            <i class="fas fa-user-tag text-primary"></i>
+                                                            Associar permissões
+                                                        </a>
+                                                    </li>
+                                                @endcan
+                                                @can('excluir_papeis')
+                                                    <li>
+                                                        <form action="{{ route('roles.destroy', $role) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="dropdown-item" href="#"
+                                                                title="Excluir"
+                                                                onclick="return confirm('Deseja realmente excluir este registro?');">
+                                                                <i class="fas fa-trash text-danger"></i>
+                                                                Excluir
+                                                            </button>
+                                                        </form>
+                                                    </li>
+                                                @endcan
+                                            </ul>
+                                        </div>
+                                    @endcanany
                                 </td>
-                                @include('roles.edit_modal_body', $role)
+                                @can('editar_papeis')
+                                    @include('roles.edit_modal_body', $role)
+                                @endcan
                             </tr>
                         @empty
                             <tr>

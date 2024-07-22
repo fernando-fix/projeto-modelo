@@ -400,17 +400,20 @@ return [
         [
             'text' => 'Usuários',
             'icon' => 'fas fa-users',
+            'can' => ['visualizar_usuarios', 'visualizar_papeis'],
             'submenu' => [
                 [
                     'text' => 'Usuários',
                     'url' => '/users',
                     'icon' => 'fas fa-user',
+                    'can' => 'visualizar_usuarios',
                     'active' => ['users/*'],
                 ],
                 [
                     'text' => 'Papéis',
                     'url' => '/roles',
                     'icon' => 'fas fa-user-tag',
+                    'can' => 'visualizar_papeis',
                     'active' => ['roles/*'],
                 ],
             ]
