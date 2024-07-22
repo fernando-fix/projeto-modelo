@@ -20,6 +20,7 @@ composer install &&
 php artisan key:generate &&
 nano .env &&
 php artisan migrate --force &&
+php artisan db:seed &&
 npm install &&
 npm run build &&
 code . &&

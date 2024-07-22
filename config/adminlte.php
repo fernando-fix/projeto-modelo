@@ -110,7 +110,7 @@ return [
     */
 
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'mode' => 'cwrapper',
         'img' => [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
@@ -381,19 +381,37 @@ return [
             'icon' => 'fas fa-tachometer-alt',
             'url' => '/dashboard',
         ],
+        // [
+        //     'text' => 'Example',
+        //     'icon' => 'fas fa-info-circle',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Blade Example',
+        //             'url' => '/examples/blade',
+        //             'icon' => 'fab fa-laravel',
+        //         ],
+        //         [
+        //             'text' => 'Vue Example',
+        //             'url' => '/examples/vue',
+        //             'icon' => 'fab fa-vuejs',
+        //         ],
+        //     ]
+        // ],
         [
-            'text' => 'Example',
-            'icon' => 'fas fa-info-circle',
+            'text' => 'Usuários',
+            'icon' => 'fas fa-users',
             'submenu' => [
                 [
-                    'text' => 'Blade Example',
-                    'url' => '/examples/blade',
-                    'icon' => 'fab fa-laravel',
+                    'text' => 'Usuários',
+                    'url' => '/users',
+                    'icon' => 'fas fa-user',
+                    'active' => ['users/*'],
                 ],
                 [
-                    'text' => 'Vue Example',
-                    'url' => '/examples/vue',
-                    'icon' => 'fab fa-vuejs',
+                    'text' => 'Papéis',
+                    'url' => '/roles',
+                    'icon' => 'fas fa-user-tag',
+                    'active' => ['roles/*'],
                 ],
             ]
         ],
