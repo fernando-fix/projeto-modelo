@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\LogAndFlash;
+use App\Http\Requests\RoleRequest;
 use App\Models\Permission;
 use App\Models\Role;
 use Illuminate\Http\Request;
@@ -41,7 +42,7 @@ class RoleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RoleRequest $request)
     {
         if (!Gate::allows('cadastrar_papeis')) {
             LogAndFlash::warning('Sem permissão de acesso!');
@@ -94,7 +95,7 @@ class RoleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Role $role)
+    public function update(RoleRequest $request, Role $role)
     {
         if (!Gate::allows('editar_papeis')) {
             LogAndFlash::warning('Sem permissão de acesso!');
